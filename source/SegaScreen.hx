@@ -5,7 +5,7 @@ import hxcodec.flixel.FlxVideo;
 import flixel.FlxG;
 import flixel.FlxSprite;
 
-class SegaScreen extends MusicBeatState
+class SegaScreen extends FlxState
 {
     var video:FlxVideo;
 
