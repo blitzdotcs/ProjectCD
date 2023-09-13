@@ -13,6 +13,9 @@ class PlayState extends FlxState
     var cdsonic:FlxSprite;
     var soniccamera:FlxCamera;
 	public var camHUD:FlxCamera;
+    public var rings:Float = 0;
+    public var lives:Float = 3;
+    public var timestones:Float = 0;
 
     // Jump shits
     var isJumping:Bool = false;
@@ -46,7 +49,7 @@ class PlayState extends FlxState
 			character.animation.addByPrefix('balance', "balancing", 6);
 			character.animation.addByPrefix('idle', "bored", 6);
 			character.animation.addByPrefix('idleLOOP', "boredloop", 6);
-			character.animation.addByPrefix('jumpie', "ball0000", 6);
+			character.animation.addByPrefix('jumpie', "ball", 6);
             character.animation.play('idleLOOP');
         }
     }
@@ -98,8 +101,6 @@ class PlayState extends FlxState
         if (FlxG.keys.pressed.UP)
         {
             cdsonic.animation.play('up');
-    
-            FlxG.camera.scroll.y -= 5; // Adjust this value as needed
         }
         else if (FlxG.keys.pressed.DOWN)
         {

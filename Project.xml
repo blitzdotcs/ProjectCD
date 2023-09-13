@@ -6,10 +6,6 @@
 
 	<app title="Project CD" file="SegaCD" main="Main" version="0.0.1" company="Blitz" />
 
-	<!-- Icon Settings -->
-
-	<icon path="icon.svg" />
-
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
 	<app preloader="flixel.system.FlxPreloader" />
@@ -85,5 +81,5 @@
 
 	<!-- _________________________________ Custom _______________________________ -->
 
-	<!--Place custom nodes like icons here-->
+	<icon path="icons/cdicon.png" />
 </project>

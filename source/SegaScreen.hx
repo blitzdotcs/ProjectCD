@@ -15,6 +15,11 @@ class SegaScreen extends FlxState
 		video.onEndReached.add(onVideoEnd);
 		video.play('assets/videos/intro/2011introretake.mp4');
 
+        if (FlxG.keys.pressed.ENTER)
+        {
+            FlxG.switchState(new PlayState());
+        }
+
 		super.create();
 	}
 
