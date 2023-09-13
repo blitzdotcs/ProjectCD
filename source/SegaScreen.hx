@@ -20,10 +20,6 @@ class SegaScreen extends FlxState
 
     public function onVideoEnd():Void
     {
-		#if desktop
-        FlxG.switchState(new REDM());
-		#else
-		FlxG.switchState(new TitleState());
-		#end
+		FlxG.switchState(new PlayState());
     }    
 }

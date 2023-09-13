@@ -1,34 +1,27 @@
 package;
 
-import flash.text.TextField;
 import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.addons.display.FlxGridOverlay;
-import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.input.keyboard.FlxKey;
-import flixel.math.FlxMath;
 import flixel.text.FlxText;
-import flixel.util.FlxColor;
-import lime.utils.Assets;
-import flixel.FlxState;
 
-class TitleState extends FlxState
+class MenuState extends FlxState
 {
-	override function create()
-	{
-		if (!FlxG.sound.music.playing)
-			FlxG.sound.playMusic(Paths.menumusic('MenuIntro'));
+    var text:FlxText;
 
+	override public function create()
+	{
 		super.create();
+
+        text = new FlxText(0, 0, 0, "Sonic CD Haxe Remake Proof of Concept", 32);
+        text.screenCenter();
+        add(text);
 	}
 
-	override function update(elapsed:Float)
+	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
 
-        if (FlxG.keys.justPressed.ENTER) 
-        {
-            FlxG.switchState(new MainMenu()); 
-        }        
+        if (FlxG.keys.justPressed.ENTER) {
+            FlxG.switchState(new PlayState());
+        }
 	}
 }

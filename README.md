@@ -1,6 +1,8 @@
 # ProjectCD
 
-* An attempt to recreate Sonic CD (2011) with a hint of the og game in Haxeflixel.
+* A proof of concept remake of Sonic CD (2011)'s Engine in haxeflixel
+
+* This will probably be inaccurate as fuck but I kinda don't care lmao
 
 # Creds
 

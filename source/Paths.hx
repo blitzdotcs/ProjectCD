@@ -12,7 +12,7 @@ using StringTools;
 
 class Paths
 {
-	inline public static var SOUND_EXT = #if web "mp3" #else "ogg" #end;
+	inline public static var SOUND_EXT = "mp3";
 	inline public static var VIDEO_EXT = "mp4";
 
 	public static function getPath(file:String, type:AssetType, ?library:Null<String> = null)
