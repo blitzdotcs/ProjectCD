@@ -30,7 +30,7 @@ class PlayState extends FlxState
         setupCharacter(cdsonic, FlxG.width / 2, FlxG.height / 2);
     }
 
-    function setupCharacter(character:FlxSprite, locationX:Float = 0, locationY:Float = 0)
+    function setupCharacter(character:FlxSprite, locationX:Float = 0, locationY:Float = 250)
     {
         character.x = locationX;
         character.y = locationY;
@@ -45,7 +45,7 @@ class PlayState extends FlxState
             character.frames = Paths.getSparrowAtlas('SonicPlayer');
             character.animation.addByPrefix('down', "down", 6);
             character.animation.addByPrefix('up', "up", 6);
-            character.animation.addByPrefix('speedlmao', "run", 6);
+            character.animation.addByPrefix('soncrunanim', "soncrun", 6);
 			character.animation.addByPrefix('balance', "balancing", 6);
 			character.animation.addByPrefix('idle', "bored", 6);
 			character.animation.addByPrefix('idleLOOP', "boredloop", 6);
@@ -64,6 +64,12 @@ class PlayState extends FlxState
 
 		FlxG.cameras.add(camHUD);
 		FlxCamera.defaultCameras = [soniccamera];
+
+		var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('ptpbg'));
+		bg.antialiasing = true;
+		bg.scrollFactor.set(0.9, 0.9);
+		bg.active = false;
+		add(bg);
 
         cdsonic.antialiasing = true;
         add(cdsonic);
@@ -88,13 +94,13 @@ class PlayState extends FlxState
         if (FlxG.keys.pressed.LEFT)
         {  
             cdsonic.x -= movementSpeed;
-            cdsonic.animation.play('speedlmao');
+            cdsonic.animation.play('soncrunanim');
             cdsonic.scale.x = -1;
         }
         else if (FlxG.keys.pressed.RIGHT)
         {
             cdsonic.x += movementSpeed;
-            cdsonic.animation.play('speedlmao');
+            cdsonic.animation.play('soncrunanim');
             cdsonic.scale.x = 1;
         }
 
