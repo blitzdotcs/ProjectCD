@@ -8,4 +8,8 @@
 
 * BlitzEX - Main Dev
 
+* !SIG7Ivan - Jr Dev (is that what they're called???)
+
+* GallantGlobz - Tweaked Sonic Sprites
+
 * Gankutsuou-Gank - FlxSoundTest
