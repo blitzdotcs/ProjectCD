@@ -1,3 +1,9 @@
+# CANNED
+
+* This is canned lmao.
+
+* [The Rewrite](https://github.com/blitzexlmao/SoniFlixel/)
+
 # ProjectCD
 
 * A proof of concept remake of Sonic CD (2011)'s Engine in haxeflixel
